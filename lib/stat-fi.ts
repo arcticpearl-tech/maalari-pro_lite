@@ -1,14 +1,14 @@
 /**
- * Tilastokeskus PxWeb — Rakennuskustannusindeksi (2021=100)
+ * Tilastokeskus PxWeb — Rakennuskustannusindeksi talotyypeittäin 2021=100
  * Public open data, no API key required.
  * License: CC BY 4.0 (Tilastokeskus)
  *
  * Data source:
- *   https://pxdata.stat.fi/PxWeb/pxweb/fi/StatFin/StatFin__rki/statfin_rki_pxt_142p.px/
+ *   https://pxdata.stat.fi/PxWeb/pxweb/fi/StatFin/StatFin__rki/statfin_rki_pxt_13g5.px/
  */
 
 const PX_URL =
-  "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/rki/statfin_rki_pxt_142p.px";
+  "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/rki/statfin_rki_pxt_13g5.px";
 
 export type CostIndexPoint = {
   period: string; // e.g. "2026M03"
@@ -41,12 +41,12 @@ export async function fetchCostIndex(signal?: AbortSignal): Promise<CostIndexRes
         selection: { filter: "top", values: ["14"] },
       },
       {
-        code: "Tiedot",
-        selection: { filter: "item", values: ["indeksi"] },
+        code: "Indeksi",
+        selection: { filter: "item", values: ["0"] },
       },
       {
-        code: "Talotyyppi",
-        selection: { filter: "item", values: ["0 Kokonaisindeksi"] },
+        code: "Tiedot",
+        selection: { filter: "item", values: ["pisteluku"] },
       },
     ],
     response: { format: "json-stat2" },

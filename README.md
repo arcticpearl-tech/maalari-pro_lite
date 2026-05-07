@@ -72,8 +72,8 @@ Ensimmäisellä käyttökerralla sovellukseen luodaan automaattisesti **kaksi es
 
 **Tilastokeskus — Rakennuskustannusindeksi (2021 = 100)**
 
-- Rajapinta: <https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/rki/statfin_rki_pxt_142p.px>
-- Tietokanta: <https://pxdata.stat.fi/PxWeb/pxweb/fi/StatFin/StatFin__rki/statfin_rki_pxt_142p.px/>
+- Rajapinta: <https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/rki/statfin_rki_pxt_13g5.px>
+- Tietokanta: <https://pxdata.stat.fi/PxWeb/pxweb/fi/StatFin/StatFin__rki/statfin_rki_pxt_13g5.px/>
 - Lisenssi: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.fi)
 - Ei vaadi rekisteröitymistä eikä API-avainta.
 

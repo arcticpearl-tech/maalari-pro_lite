@@ -131,7 +131,7 @@ export function PricingCalculator() {
                 key={line.id}
                 className="grid grid-cols-12 gap-2 items-end p-3 rounded-md bg-surface-subtle"
               >
-                <div className="col-span-12 sm:col-span-5">
+                <div className="col-span-12 sm:col-span-4">
                   {idx === 0 && <Label>Kuvaus</Label>}
                   <Input
                     value={line.description}
@@ -141,7 +141,7 @@ export function PricingCalculator() {
                     placeholder="Seinät, katto…"
                   />
                 </div>
-                <div className="col-span-5 sm:col-span-2">
+                <div className="col-span-4 sm:col-span-2">
                   {idx === 0 && <Label>m²</Label>}
                   <Input
                     type="number"
@@ -153,7 +153,7 @@ export function PricingCalculator() {
                     }
                   />
                 </div>
-                <div className="col-span-5 sm:col-span-2">
+                <div className="col-span-4 sm:col-span-2">
                   {idx === 0 && <Label>€/m²</Label>}
                   <Input
                     type="number"
@@ -167,13 +167,14 @@ export function PricingCalculator() {
                     }
                   />
                 </div>
-                <div className="col-span-2 sm:col-span-2 text-right">
+                <div className="col-span-4 sm:col-span-2 text-right">
                   {idx === 0 && <Label>Yht.</Label>}
-                  <div className="h-11 flex items-center justify-end text-sm font-medium">
+                  <div className="h-11 flex items-center justify-end text-sm font-medium tabular-nums whitespace-nowrap">
                     {formatEuro(lineSubtotal(line))}
                   </div>
                 </div>
-                <div className="col-span-12 sm:col-span-1 flex sm:justify-end">
+                <div className="col-span-12 sm:col-span-2 flex sm:justify-end">
+                  {idx === 0 && <Label className="sm:invisible">&nbsp;</Label>}
                   <Button
                     type="button"
                     variant="ghost"
@@ -181,6 +182,7 @@ export function PricingCalculator() {
                     onClick={() => removeLine(line.id)}
                     aria-label="Poista rivi"
                     disabled={offer.lines.length === 1}
+                    className="text-error hover:bg-error/10"
                   >
                     Poista
                   </Button>
